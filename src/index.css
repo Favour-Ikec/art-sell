@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff6, #ffe6, #b04a3c 70%, transparent 100%);
+  opacity: 0.8;
+  box-shadow: 0 0 6px 2px #fff8, 0 0 18px 0 #b04a3c66;
+  animation: sparkle-fade 4s infinite ease-in-out;
+}
+
+@keyframes sparkle-fade {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+    filter: blur(1px);
+  }
+}
+
+.ember {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 70%, #ffbb44 70%, #fd5732 85%, #c13011 100%);
+  box-shadow:
+    0 0 12px 3px #fd573266,
+    0 0 16px 6px #fd573255;
+  animation: ember-rise 4s linear infinite, ember-flicker 0.5s infinite alternate;
+}
+
+@keyframes ember-rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: blur(0.5px);
+  }
+  60% {
+    filter: blur(1.1px);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-120px) scale(0.5);
+    opacity: 0;
+    filter: blur(1.4px);
+  }
+}
+
+@keyframes ember-flicker {
+  0% {
+    filter: brightness(0.95) blur(0.2px);
+  }
+  100% {
+    filter: brightness(1.13) blur(1px);
+  }
+}
