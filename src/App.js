@@ -11,6 +11,8 @@ import PaymentPage from "./pages/PaymentPage";
 import { CartProvider } from "./contexts/CartContext";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import ContactPage from "./pages/ContactPage";
+import DebugCart from './components/DebugCart';
+
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/debug-cart" element={<DebugCart />} />   
         </Routes>
       </Router>
     </CartProvider>
